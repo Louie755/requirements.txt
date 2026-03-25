@@ -1,0 +1,821 @@
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>NHL ANALYST V2.6</title>
+        <style>
+            body { background:#000; color:#fff; font-family:-apple-system, sans-serif; padding:40px; line-height:1.5; }
+            .header { border-left:8px solid #38bdf8; padding-left:20px; margin-bottom:40px; }
+            .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap:15px; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h4 style="margin:0; color:#38bdf8; letter-spacing:1px;">PRO MEDIA ANALYST PORTAL</h4>
+            <h1 style="margin:5px 0 0 0; font-size:2.8rem;">Sports Media Analyst</h1>
+            <div style="color:#71717a; margin-top:10px; font-weight:600;">CERT: CERT-PRO-2026-V2.6 | SYNC: 16:42:11</div>
+        </div>
+        <div class="grid">
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nikita Kucherov</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 64 GP | PPG 1.84</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">118 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Connor McDavid</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 71 GP | PPG 1.63</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">116 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nathan MacKinnon</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 1.7</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">114 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Leon Draisaitl</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 1.49</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">97 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Macklin Celebrini</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 1.41</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">96 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">David Pastrnak</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 1.32</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">86 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nick Suzuki</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.23</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">85 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Martin Necas</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 1.29</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">84 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mark Scheifele</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.2</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">83 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jason Robertson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.19</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">82 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Kirill Kaprizov</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.16</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">80 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Evan Bouchard</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 71 GP | PPG 1.11</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">79 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Kyle Connor</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.13</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">78 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Zach Werenski</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 62 GP | PPG 1.21</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">75 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Matt Boldy</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 1.12</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">75 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Wyatt Johnston</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.07</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">74 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jack Eichel</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 62 GP | PPG 1.19</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">74 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Cole Caufield</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 1.09</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">74 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Artemi Panarin</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 1.12</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">73 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Alex DeBrincat</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 1.04</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">73 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jake Guentzel</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 1.06</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">72 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Tage Thompson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 1.03</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">72 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Tim Stützle</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.04</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">72 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Sebastian Aho</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.03</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">71 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Cale Makar</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 1.03</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">70 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mitch Marner</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.0</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">69 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Lane Hutson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 1.0</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">69 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Quinn Hughes</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 1.06</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">69 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mikko Rantanen</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 54 GP | PPG 1.28</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">69 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Lucas Raymond</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 1.0</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">68 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Brandon Hagel</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 63 GP | PPG 1.06</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">67 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Clayton Keller</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.96</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">67 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mika Zibanejad</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.97</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">66 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Connor Bedard</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 56 GP | PPG 1.16</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">65 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">William Nylander</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 54 GP | PPG 1.2</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">65 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Ryan O'Reilly</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.94</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">64 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mathew Barzal</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.93</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">64 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Rasmus Dahlin</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 66 GP | PPG 0.95</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">63 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Mark Stone</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 48 GP | PPG 1.29</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">62 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Sidney Crosby</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 58 GP | PPG 1.07</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">62 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Cutter Gauthier</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.91</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">62 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nick Schmaltz</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">61 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Drake Batherson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 66 GP | PPG 0.92</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">61 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Morgan Geekie</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.88</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">61 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Sam Reinhart</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 64 GP | PPG 0.95</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">61 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Juraj Slafkovský</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.88</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">61 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Travis Konecny</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 65 GP | PPG 0.92</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">60 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Darren Raddysh</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 61 GP | PPG 0.98</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">60 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Adrian Kempe</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">59 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Andrei Svechnikov</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.86</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">59 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Dylan Guenther</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">59 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Filip Forsberg</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.86</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">59 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Miro Heiskanen</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">58 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Kirill Marchenko</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 63 GP | PPG 0.92</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">58 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Alex Tuch</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">58 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">John Tavares</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 71 GP | PPG 0.8</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">57 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Matthew Knies</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.84</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">57 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Pavel Dorofeyev</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.81</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">57 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Seth Jarvis</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 61 GP | PPG 0.92</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Leo Carlsson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 57 GP | PPG 0.98</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Gabriel Vilardi</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.81</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nikolaj Ehlers</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.81</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Brock Nelson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.82</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Bryan Rust</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 62 GP | PPG 0.9</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">56 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jack Hughes</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 48 GP | PPG 1.15</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Charlie Coyle</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.8</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Dylan Larkin</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 63 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Trevor Zegras</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.8</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Steven Stamkos</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.8</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jesper Bratt</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.8</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">55 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Brad Marchand</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 52 GP | PPG 1.04</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">54 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Tomas Hertl</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.77</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">54 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Erik Karlsson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 64 GP | PPG 0.84</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">54 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Anthony Mantha</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.77</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">53 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Charlie McAvoy</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 58 GP | PPG 0.91</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">53 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Auston Matthews</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 60 GP | PPG 0.88</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">53 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Sam Bennett</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.78</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">53 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Evgeni Malkin</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 49 GP | PPG 1.06</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Adam Fantilli</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.75</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Tom Wilson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 60 GP | PPG 0.87</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Ivan Demidov</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.75</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Alex Ovechkin</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.74</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Beckett Sennecke</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.75</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Nico Hischier</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.75</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">52 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Matthew Schaefer</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.73</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">51 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Ryan Nugent-Hopkins</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 61 GP | PPG 0.84</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">51 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Dylan Cozens</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 69 GP | PPG 0.74</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">51 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Pavel Zacha</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 0.76</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">51 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jakob Chychrun</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.75</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">51 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Dylan Strome</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.74</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">50 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Bo Horvat</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 56 GP | PPG 0.88</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Ryan McLeod</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.7</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Tyler Bertuzzi</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 66 GP | PPG 0.74</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Troy Terry</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 49 GP | PPG 1.0</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Carter Verhaeghe</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 0.73</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jordan Eberle</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 67 GP | PPG 0.73</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">49 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Ivan Barbashev</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.69</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">48 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Jake Sanderson</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 62 GP | PPG 0.77</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">48 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Luke Evangelista</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 68 GP | PPG 0.71</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">48 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div>
+        <div style="background:#111; border:1px solid #222; border-radius:12px; padding:15px; display:flex; align-items:center; margin-bottom:10px;">
+            <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" style="width:40px; margin-right:15px;" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+            <div style="flex-grow:1;">
+                <div style="font-weight:800; font-size:1.1rem;">Moritz Seider</div>
+                <div style="font-size:0.8rem; color:#38bdf8; font-weight:700;">NHL | 70 GP | PPG 0.69</div>
+            </div>
+            <div style="font-size:1.6rem; font-weight:900; color:#fff;">48 <span style="font-size:0.7rem; color:#71717a;">PTS</span></div>
+        </div></div>
+    </body>
+    </html>

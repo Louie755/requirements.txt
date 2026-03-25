@@ -1,0 +1,1732 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NHL FULL ROSTER INTEL</title>
+        <style>
+            body { background: #050505; color: white; font-family: 'Segoe UI', sans-serif; padding: 40px; }
+            .header { border-left: 10px solid #38bdf8; padding-left: 20px; margin-bottom: 50px; }
+            h1 { font-size: 3rem; margin: 0; }
+            .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; }
+            .player-card { background: #111; border-radius: 12px; overflow: hidden; display: flex; border: 1px solid #222; }
+            .team-stripe { width: 8px; }
+            .card-body { padding: 20px; display: flex; align-items: center; width: 100%; }
+            .team-logo { width: 50px; height: 50px; margin-right: 20px; }
+            .info { flex-grow: 1; }
+            .name { font-size: 1.2rem; font-weight: 800; }
+            .team-text { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+            .stats { display: flex; gap: 12px; text-align: center; }
+            .stat-item { font-weight: 700; font-size: 1rem; line-height: 1.2; }
+            .highlight { color: #38bdf8; }
+            .ppg { background: #38bdf8; color: black; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>NHL FULL ROSTER ANALYST REPORT</h1>
+            <p>전체 선수 실시간 데이터 (자동 시즌 리셋 적용)</p>
+        </div>
+        <div class="container">
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nikita Kucherov</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>64</div>
+                    <div class="stat-item"><small>G</small><br>40</div>
+                    <div class="stat-item"><small>A</small><br>78</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>118</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.84</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Connor McDavid</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>71</div>
+                    <div class="stat-item"><small>G</small><br>38</div>
+                    <div class="stat-item"><small>A</small><br>78</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>116</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.63</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nathan MacKinnon</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>45</div>
+                    <div class="stat-item"><small>A</small><br>69</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>114</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.7</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Leon Draisaitl</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>35</div>
+                    <div class="stat-item"><small>A</small><br>62</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>97</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.49</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Macklin Celebrini</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>35</div>
+                    <div class="stat-item"><small>A</small><br>61</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>96</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.41</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">David Pastrnak</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>58</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>86</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.32</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nick Suzuki</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>61</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>85</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.23</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Martin Necas</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>32</div>
+                    <div class="stat-item"><small>A</small><br>52</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>84</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.29</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mark Scheifele</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>31</div>
+                    <div class="stat-item"><small>A</small><br>52</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>83</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.2</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jason Robertson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>38</div>
+                    <div class="stat-item"><small>A</small><br>44</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>82</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.19</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Kirill Kaprizov</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>38</div>
+                    <div class="stat-item"><small>A</small><br>42</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>80</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.16</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Evan Bouchard</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>71</div>
+                    <div class="stat-item"><small>G</small><br>19</div>
+                    <div class="stat-item"><small>A</small><br>60</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>79</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.11</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Kyle Connor</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>31</div>
+                    <div class="stat-item"><small>A</small><br>47</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>78</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.13</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Zach Werenski</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>62</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>55</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>75</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.21</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Matt Boldy</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>38</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>75</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.12</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Cole Caufield</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>43</div>
+                    <div class="stat-item"><small>A</small><br>31</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>74</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.09</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jack Eichel</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>62</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>50</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>74</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.19</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Wyatt Johnston</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>37</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>74</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.07</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Alex DeBrincat</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>35</div>
+                    <div class="stat-item"><small>A</small><br>38</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>73</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.04</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Artemi Panarin</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>49</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>73</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.12</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jake Guentzel</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>31</div>
+                    <div class="stat-item"><small>A</small><br>41</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>72</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.06</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Tim Stützle</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>32</div>
+                    <div class="stat-item"><small>A</small><br>40</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>72</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.04</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Tage Thompson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>36</div>
+                    <div class="stat-item"><small>A</small><br>36</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>72</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.03</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Sebastian Aho</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>47</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>71</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.03</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Cale Makar</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>50</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>70</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.03</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Quinn Hughes</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>6</div>
+                    <div class="stat-item"><small>A</small><br>63</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>69</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.06</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Lane Hutson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>11</div>
+                    <div class="stat-item"><small>A</small><br>58</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>69</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mitch Marner</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>19</div>
+                    <div class="stat-item"><small>A</small><br>50</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>69</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mikko Rantanen</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>54</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>49</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>69</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.28</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Lucas Raymond</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>22</div>
+                    <div class="stat-item"><small>A</small><br>46</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>68</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Clayton Keller</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>22</div>
+                    <div class="stat-item"><small>A</small><br>45</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>67</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.96</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Brandon Hagel</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>63</div>
+                    <div class="stat-item"><small>G</small><br>32</div>
+                    <div class="stat-item"><small>A</small><br>35</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>67</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.06</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mika Zibanejad</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>29</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>66</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.97</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Connor Bedard</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>56</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>65</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.16</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">William Nylander</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>54</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>41</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>65</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.2</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Ryan O'Reilly</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>40</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>64</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.94</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mathew Barzal</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>18</div>
+                    <div class="stat-item"><small>A</small><br>46</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>64</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.93</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Rasmus Dahlin</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>66</div>
+                    <div class="stat-item"><small>G</small><br>15</div>
+                    <div class="stat-item"><small>A</small><br>48</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>63</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.95</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Mark Stone</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>48</div>
+                    <div class="stat-item"><small>G</small><br>21</div>
+                    <div class="stat-item"><small>A</small><br>41</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>62</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.29</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Sidney Crosby</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>58</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>34</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>62</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.07</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Cutter Gauthier</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>36</div>
+                    <div class="stat-item"><small>A</small><br>26</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>62</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.91</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Drake Batherson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>66</div>
+                    <div class="stat-item"><small>G</small><br>27</div>
+                    <div class="stat-item"><small>A</small><br>34</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>61</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.92</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Sam Reinhart</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>64</div>
+                    <div class="stat-item"><small>G</small><br>29</div>
+                    <div class="stat-item"><small>A</small><br>32</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>61</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.95</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nick Schmaltz</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>61</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Juraj Slafkovský</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>27</div>
+                    <div class="stat-item"><small>A</small><br>34</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>61</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.88</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Morgan Geekie</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>34</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>61</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.88</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Travis Konecny</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>65</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>35</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>60</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.92</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Darren Raddysh</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>61</div>
+                    <div class="stat-item"><small>G</small><br>18</div>
+                    <div class="stat-item"><small>A</small><br>42</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>60</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.98</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Filip Forsberg</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>30</div>
+                    <div class="stat-item"><small>A</small><br>29</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>59</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.86</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Adrian Kempe</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>26</div>
+                    <div class="stat-item"><small>A</small><br>33</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>59</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Andrei Svechnikov</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>34</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>59</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.86</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Dylan Guenther</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>34</div>
+                    <div class="stat-item"><small>A</small><br>25</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>59</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Miro Heiskanen</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>9</div>
+                    <div class="stat-item"><small>A</small><br>49</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>58</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Kirill Marchenko</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>63</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>33</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>58</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.92</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Alex Tuch</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>30</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>58</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Matthew Knies</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>18</div>
+                    <div class="stat-item"><small>A</small><br>39</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>57</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.84</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Pavel Dorofeyev</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>34</div>
+                    <div class="stat-item"><small>A</small><br>23</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>57</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.81</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">John Tavares</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>71</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>32</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>57</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Gabriel Vilardi</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>26</div>
+                    <div class="stat-item"><small>A</small><br>30</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.81</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Bryan Rust</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>62</div>
+                    <div class="stat-item"><small>G</small><br>26</div>
+                    <div class="stat-item"><small>A</small><br>30</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.9</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Leo Carlsson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>57</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>32</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.98</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nikolaj Ehlers</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>36</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.81</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Brock Nelson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>31</div>
+                    <div class="stat-item"><small>A</small><br>25</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.82</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Seth Jarvis</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>61</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>28</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>56</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.92</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Charlie Coyle</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>17</div>
+                    <div class="stat-item"><small>A</small><br>38</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jack Hughes</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>48</div>
+                    <div class="stat-item"><small>G</small><br>18</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.15</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Steven Stamkos</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>33</div>
+                    <div class="stat-item"><small>A</small><br>22</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jesper Bratt</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>17</div>
+                    <div class="stat-item"><small>A</small><br>38</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Trevor Zegras</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>22</div>
+                    <div class="stat-item"><small>A</small><br>33</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Dylan Larkin</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>63</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>55</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Brad Marchand</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>52</div>
+                    <div class="stat-item"><small>G</small><br>27</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>54</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.04</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Erik Karlsson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>64</div>
+                    <div class="stat-item"><small>G</small><br>11</div>
+                    <div class="stat-item"><small>A</small><br>43</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>54</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.84</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Tomas Hertl</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>30</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>54</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.77</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Charlie McAvoy</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>58</div>
+                    <div class="stat-item"><small>G</small><br>9</div>
+                    <div class="stat-item"><small>A</small><br>44</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>53</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.91</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Sam Bennett</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>28</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>53</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.78</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Anthony Mantha</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>26</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>53</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.77</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Auston Matthews</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>60</div>
+                    <div class="stat-item"><small>G</small><br>27</div>
+                    <div class="stat-item"><small>A</small><br>26</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>53</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.88</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Adam Fantilli</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>21</div>
+                    <div class="stat-item"><small>A</small><br>31</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.75</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Alex Ovechkin</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.74</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Beckett Sennecke</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>32</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.75</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Tom Wilson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>60</div>
+                    <div class="stat-item"><small>G</small><br>25</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.87</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Ivan Demidov</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>14</div>
+                    <div class="stat-item"><small>A</small><br>38</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.75</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Evgeni Malkin</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>49</div>
+                    <div class="stat-item"><small>G</small><br>15</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.06</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Nico Hischier</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>28</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>52</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.75</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Pavel Zacha</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>23</div>
+                    <div class="stat-item"><small>A</small><br>28</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>51</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.76</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Ryan Nugent-Hopkins</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>61</div>
+                    <div class="stat-item"><small>G</small><br>18</div>
+                    <div class="stat-item"><small>A</small><br>33</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>51</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.84</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Matthew Schaefer</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>22</div>
+                    <div class="stat-item"><small>A</small><br>29</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>51</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.73</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jakob Chychrun</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>23</div>
+                    <div class="stat-item"><small>A</small><br>28</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>51</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.75</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Dylan Cozens</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>69</div>
+                    <div class="stat-item"><small>G</small><br>24</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>51</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.74</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Dylan Strome</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>68</div>
+                    <div class="stat-item"><small>G</small><br>16</div>
+                    <div class="stat-item"><small>A</small><br>34</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>50</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.74</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Carter Verhaeghe</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>20</div>
+                    <div class="stat-item"><small>A</small><br>29</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.73</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Ryan McLeod</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>12</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.7</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Bo Horvat</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>56</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>21</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.88</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Tyler Bertuzzi</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>66</div>
+                    <div class="stat-item"><small>G</small><br>28</div>
+                    <div class="stat-item"><small>A</small><br>21</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.74</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Troy Terry</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>49</div>
+                    <div class="stat-item"><small>G</small><br>14</div>
+                    <div class="stat-item"><small>A</small><br>35</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>1.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jordan Eberle</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>67</div>
+                    <div class="stat-item"><small>G</small><br>22</div>
+                    <div class="stat-item"><small>A</small><br>27</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>49</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.73</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Vincent Trocheck</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>54</div>
+                    <div class="stat-item"><small>G</small><br>15</div>
+                    <div class="stat-item"><small>A</small><br>33</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>48</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.89</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Anthony Cirelli</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>60</div>
+                    <div class="stat-item"><small>G</small><br>19</div>
+                    <div class="stat-item"><small>A</small><br>29</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>48</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.8</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Ivan Barbashev</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>70</div>
+                    <div class="stat-item"><small>G</small><br>19</div>
+                    <div class="stat-item"><small>A</small><br>29</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>48</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.69</div>
+                </div>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="team-stripe" style="background:#333"></div>
+            <div class="card-body">
+                <img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg" class="team-logo" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/NHL_light.svg';">
+                <div class="info">
+                    <div class="name">Jake Sanderson</div>
+                    <div class="team-text" style="color:#333">NHL</div>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><small>GP</small><br>62</div>
+                    <div class="stat-item"><small>G</small><br>11</div>
+                    <div class="stat-item"><small>A</small><br>37</div>
+                    <div class="stat-item highlight"><small>PTS</small><br>48</div>
+                    <div class="stat-item ppg"><small>PPG</small><br>0.77</div>
+                </div>
+            </div>
+        </div></div>
+    </body>
+    </html>

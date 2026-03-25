@@ -1,0 +1,190 @@
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>NHL ANALYTICA ELITE</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+        <style>
+            :root { --accent: #38bdf8; --bg: #030712; --card: rgba(31, 41, 55, 0.5); }
+            body { background: var(--bg); color: #e5e7eb; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+            
+            /* Glassmorphism Header */
+            header { 
+                position: sticky; top: 0; z-index: 100;
+                background: rgba(3, 7, 18, 0.8); backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 5%;
+                display: flex; justify-content: space-between; align-items: center;
+            }
+            .logo { font-family: 'Syncopate', sans-serif; font-size: 1.5rem; letter-spacing: -1px; color: var(--accent); }
+            
+            /* Team Ribbon */
+            .team-ribbon { 
+                display: flex; gap: 12px; padding: 15px 5%; overflow-x: auto; 
+                background: rgba(255,255,255,0.03); scrollbar-width: none;
+            }
+            .t-badge { 
+                min-width: 50px; height: 50px; border-radius: 12px; background: var(--card); 
+                display: flex; align-items: center; justify-content: center; cursor: pointer;
+                transition: 0.3s; border: 1px solid transparent;
+            }
+            .t-badge:hover { border-color: var(--accent); transform: scale(1.1); background: rgba(56,189,248,0.1); }
+            .t-badge img { width: 35px; }
+
+            /* Dashboard Stats */
+            .dashboard { padding: 30px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+            .stat-card { background: var(--card); border-radius: 15px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); }
+            .stat-label { color: #9ca3af; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+            .stat-value { font-size: 1.8rem; font-weight: 900; margin-top: 5px; color: var(--accent); }
+
+            /* Grid & Player Card */
+            .container { padding: 0 5% 50px; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+            .card { 
+                background: var(--card); border-radius: 20px; padding: 20px; 
+                border: 1px solid rgba(255,255,255,0.05); cursor: pointer; transition: 0.3s;
+                position: relative; overflow: hidden;
+            }
+            .card:hover { border-color: var(--accent); transform: translateY(-5px); background: rgba(31, 41, 55, 0.8); }
+            .card::before { 
+                content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; 
+                background: var(--team-color); opacity: 0.7;
+            }
+            .card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+            .player-thumb { width: 60px; height: 60px; border-radius: 50%; background: #000; border: 2px solid var(--team-color); }
+            .name-area h3 { margin: 0; font-size: 1.1rem; font-weight: 800; }
+            .name-area span { font-size: 0.75rem; color: #9ca3af; }
+
+            /* Comparison Bar */
+            .comp-bar { height: 6px; background: #374151; border-radius: 3px; margin-top: 8px; position: relative; }
+            .comp-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: 1s; width: 0; }
+
+            /* Modal Style */
+            .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(10px); }
+            .modal-box { 
+                background: #111827; width: 90%; max-width: 900px; margin: 5vh auto; 
+                border-radius: 30px; border: 1px solid var(--accent); display: grid; grid-template-columns: 1fr 1.5fr; overflow: hidden;
+                animation: zoom 0.3s ease;
+            }
+            @keyframes zoom { from {transform:scale(0.9); opacity:0;} to {transform:scale(1); opacity:1;} }
+            .modal-info { padding: 40px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center; }
+            .modal-viz { padding: 40px; background: #030712; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">NHL ANALYTICA <span style="font-weight:300">V4</span></div>
+            <input type="text" id="search" placeholder="Search elite talent..." 
+                   style="background:#1f2937; border:none; padding:10px 20px; border-radius:10px; color:white; width:250px;" onkeyup="render()">
+        </header>
+
+        <div class="team-ribbon"><div class="t-badge" onclick="filterTeam('NHL')"><img src="https://assets.nhle.com/logos/nhl/svg/NHL_light.svg"></div></div>
+
+        <div class="dashboard">
+            <div class="stat-card"><div class="stat-label">League Avg Pts</div><div class="stat-value">63.2</div></div>
+            <div class="stat-card"><div class="stat-label">Active Analysis</div><div class="stat-value">100 <span style="font-size:1rem">Pros</span></div></div>
+            <div class="stat-card"><div class="stat-label">Top Goal Avg</div><div class="stat-value">24.8</div></div>
+            <div class="stat-card"><div class="stat-label">System Status</div><div class="stat-value" style="color:#10b981">LIVE</div></div>
+        </div>
+
+        <div class="container">
+            <div class="grid" id="grid"></div>
+        </div>
+
+        <div id="modal" class="modal" onclick="closeModal()">
+            <div class="modal-box" onclick="event.stopPropagation()">
+                <div class="modal-info" id="mInfo"></div>
+                <div class="modal-viz">
+                    <h4 style="font-family:'Syncopate'; font-size:0.8rem; margin-bottom:20px;">Elite Attribute Mapping</h4>
+                    <canvas id="radar"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const data = [{"id":"8476453","name":"Nikita Kucherov","abbr":"NHL","pos":"R","gp":64,"g":40,"a":78,"pts":118,"pm":44,"sh":198,"ppg":1.84,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476453.png"},{"id":"8478402","name":"Connor McDavid","abbr":"NHL","pos":"C","gp":71,"g":38,"a":78,"pts":116,"pm":8,"sh":257,"ppg":1.63,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478402.png"},{"id":"8477492","name":"Nathan MacKinnon","abbr":"NHL","pos":"C","gp":67,"g":45,"a":69,"pts":114,"pm":57,"sh":300,"ppg":1.7,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477492.png"},{"id":"8477934","name":"Leon Draisaitl","abbr":"NHL","pos":"C","gp":65,"g":35,"a":62,"pts":97,"pm":13,"sh":186,"ppg":1.49,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477934.png"},{"id":"8484801","name":"Macklin Celebrini","abbr":"NHL","pos":"C","gp":68,"g":35,"a":61,"pts":96,"pm":3,"sh":236,"ppg":1.41,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484801.png"},{"id":"8477956","name":"David Pastrnak","abbr":"NHL","pos":"R","gp":65,"g":28,"a":58,"pts":86,"pm":1,"sh":226,"ppg":1.32,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477956.png"},{"id":"8480018","name":"Nick Suzuki","abbr":"NHL","pos":"C","gp":69,"g":24,"a":61,"pts":85,"pm":27,"sh":152,"ppg":1.23,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480018.png"},{"id":"8480039","name":"Martin Necas","abbr":"NHL","pos":"C","gp":65,"g":32,"a":52,"pts":84,"pm":44,"sh":169,"ppg":1.29,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480039.png"},{"id":"8476460","name":"Mark Scheifele","abbr":"NHL","pos":"C","gp":69,"g":31,"a":52,"pts":83,"pm":0,"sh":147,"ppg":1.2,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476460.png"},{"id":"8480027","name":"Jason Robertson","abbr":"NHL","pos":"L","gp":69,"g":38,"a":44,"pts":82,"pm":22,"sh":243,"ppg":1.19,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480027.png"},{"id":"8478864","name":"Kirill Kaprizov","abbr":"NHL","pos":"L","gp":69,"g":38,"a":42,"pts":80,"pm":8,"sh":242,"ppg":1.16,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478864.png"},{"id":"8480803","name":"Evan Bouchard","abbr":"NHL","pos":"D","gp":71,"g":19,"a":60,"pts":79,"pm":15,"sh":198,"ppg":1.11,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480803.png"},{"id":"8478398","name":"Kyle Connor","abbr":"NHL","pos":"L","gp":69,"g":31,"a":47,"pts":78,"pm":-2,"sh":226,"ppg":1.13,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478398.png"},{"id":"8481557","name":"Matt Boldy","abbr":"NHL","pos":"L","gp":67,"g":38,"a":37,"pts":75,"pm":16,"sh":225,"ppg":1.12,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481557.png"},{"id":"8478460","name":"Zach Werenski","abbr":"NHL","pos":"D","gp":62,"g":20,"a":55,"pts":75,"pm":11,"sh":219,"ppg":1.21,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478460.png"},{"id":"8482740","name":"Wyatt Johnston","abbr":"NHL","pos":"C","gp":69,"g":37,"a":37,"pts":74,"pm":-1,"sh":179,"ppg":1.07,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482740.png"},{"id":"8478403","name":"Jack Eichel","abbr":"NHL","pos":"C","gp":62,"g":24,"a":50,"pts":74,"pm":9,"sh":222,"ppg":1.19,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478403.png"},{"id":"8481540","name":"Cole Caufield","abbr":"NHL","pos":"R","gp":68,"g":43,"a":31,"pts":74,"pm":21,"sh":208,"ppg":1.09,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481540.png"},{"id":"8479337","name":"Alex DeBrincat","abbr":"NHL","pos":"R","gp":70,"g":35,"a":38,"pts":73,"pm":7,"sh":245,"ppg":1.04,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479337.png"},{"id":"8478550","name":"Artemi Panarin","abbr":"NHL","pos":"L","gp":65,"g":24,"a":49,"pts":73,"pm":-11,"sh":193,"ppg":1.12,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478550.png"},{"id":"8479420","name":"Tage Thompson","abbr":"NHL","pos":"C","gp":70,"g":36,"a":36,"pts":72,"pm":-4,"sh":239,"ppg":1.03,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479420.png"},{"id":"8477404","name":"Jake Guentzel","abbr":"NHL","pos":"C","gp":68,"g":31,"a":41,"pts":72,"pm":10,"sh":181,"ppg":1.06,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477404.png"},{"id":"8482116","name":"Tim Stützle","abbr":"NHL","pos":"C","gp":69,"g":32,"a":40,"pts":72,"pm":7,"sh":169,"ppg":1.04,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482116.png"},{"id":"8478427","name":"Sebastian Aho","abbr":"NHL","pos":"C","gp":69,"g":24,"a":47,"pts":71,"pm":9,"sh":166,"ppg":1.03,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478427.png"},{"id":"8480069","name":"Cale Makar","abbr":"NHL","pos":"D","gp":68,"g":20,"a":50,"pts":70,"pm":32,"sh":183,"ppg":1.03,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480069.png"},{"id":"8480800","name":"Quinn Hughes","abbr":"NHL","pos":"D","gp":65,"g":6,"a":63,"pts":69,"pm":-2,"sh":168,"ppg":1.06,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480800.png"},{"id":"8478483","name":"Mitch Marner","abbr":"NHL","pos":"R","gp":69,"g":19,"a":50,"pts":69,"pm":14,"sh":132,"ppg":1.0,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478483.png"},{"id":"8483457","name":"Lane Hutson","abbr":"NHL","pos":"D","gp":69,"g":11,"a":58,"pts":69,"pm":26,"sh":111,"ppg":1.0,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8483457.png"},{"id":"8478420","name":"Mikko Rantanen","abbr":"NHL","pos":"R","gp":54,"g":20,"a":49,"pts":69,"pm":2,"sh":126,"ppg":1.28,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478420.png"},{"id":"8482078","name":"Lucas Raymond","abbr":"NHL","pos":"L","gp":68,"g":22,"a":46,"pts":68,"pm":10,"sh":148,"ppg":1.0,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482078.png"},{"id":"8479343","name":"Clayton Keller","abbr":"NHL","pos":"R","gp":70,"g":22,"a":45,"pts":67,"pm":22,"sh":195,"ppg":0.96,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479343.png"},{"id":"8479542","name":"Brandon Hagel","abbr":"NHL","pos":"L","gp":63,"g":32,"a":35,"pts":67,"pm":35,"sh":183,"ppg":1.06,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479542.png"},{"id":"8476459","name":"Mika Zibanejad","abbr":"NHL","pos":"C","gp":68,"g":29,"a":37,"pts":66,"pm":-21,"sh":179,"ppg":0.97,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476459.png"},{"id":"8477939","name":"William Nylander","abbr":"NHL","pos":"R","gp":54,"g":24,"a":41,"pts":65,"pm":-5,"sh":121,"ppg":1.2,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477939.png"},{"id":"8484144","name":"Connor Bedard","abbr":"NHL","pos":"C","gp":56,"g":28,"a":37,"pts":65,"pm":-2,"sh":185,"ppg":1.16,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484144.png"},{"id":"8475158","name":"Ryan O'Reilly","abbr":"NHL","pos":"C","gp":68,"g":24,"a":40,"pts":64,"pm":7,"sh":135,"ppg":0.94,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475158.png"},{"id":"8478445","name":"Mathew Barzal","abbr":"NHL","pos":"C","gp":69,"g":18,"a":46,"pts":64,"pm":14,"sh":154,"ppg":0.93,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478445.png"},{"id":"8480839","name":"Rasmus Dahlin","abbr":"NHL","pos":"D","gp":66,"g":15,"a":48,"pts":63,"pm":13,"sh":167,"ppg":0.95,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480839.png"},{"id":"8471675","name":"Sidney Crosby","abbr":"NHL","pos":"C","gp":58,"g":28,"a":34,"pts":62,"pm":0,"sh":137,"ppg":1.07,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8471675.png"},{"id":"8483445","name":"Cutter Gauthier","abbr":"NHL","pos":"L","gp":68,"g":36,"a":26,"pts":62,"pm":1,"sh":255,"ppg":0.91,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8483445.png"},{"id":"8475913","name":"Mark Stone","abbr":"NHL","pos":"R","gp":48,"g":21,"a":41,"pts":62,"pm":13,"sh":103,"ppg":1.29,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475913.png"},{"id":"8477951","name":"Nick Schmaltz","abbr":"NHL","pos":"C","gp":70,"g":24,"a":37,"pts":61,"pm":22,"sh":166,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477951.png"},{"id":"8479987","name":"Morgan Geekie","abbr":"NHL","pos":"C","gp":69,"g":34,"a":27,"pts":61,"pm":-5,"sh":158,"ppg":0.88,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479987.png"},{"id":"8483515","name":"Juraj Slafkovský","abbr":"NHL","pos":"L","gp":69,"g":27,"a":34,"pts":61,"pm":5,"sh":151,"ppg":0.88,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8483515.png"},{"id":"8477933","name":"Sam Reinhart","abbr":"NHL","pos":"C","gp":64,"g":29,"a":32,"pts":61,"pm":-18,"sh":166,"ppg":0.95,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477933.png"},{"id":"8480208","name":"Drake Batherson","abbr":"NHL","pos":"R","gp":66,"g":27,"a":34,"pts":61,"pm":-4,"sh":145,"ppg":0.92,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480208.png"},{"id":"8478178","name":"Darren Raddysh","abbr":"NHL","pos":"D","gp":61,"g":18,"a":42,"pts":60,"pm":24,"sh":170,"ppg":0.98,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478178.png"},{"id":"8478439","name":"Travis Konecny","abbr":"NHL","pos":"R","gp":65,"g":25,"a":35,"pts":60,"pm":12,"sh":144,"ppg":0.92,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478439.png"},{"id":"8480830","name":"Andrei Svechnikov","abbr":"NHL","pos":"R","gp":69,"g":25,"a":34,"pts":59,"pm":1,"sh":174,"ppg":0.86,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480830.png"},{"id":"8477960","name":"Adrian Kempe","abbr":"NHL","pos":"R","gp":68,"g":26,"a":33,"pts":59,"pm":8,"sh":191,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477960.png"},{"id":"8482699","name":"Dylan Guenther","abbr":"NHL","pos":"R","gp":68,"g":34,"a":25,"pts":59,"pm":6,"sh":212,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482699.png"},{"id":"8476887","name":"Filip Forsberg","abbr":"NHL","pos":"L","gp":69,"g":30,"a":29,"pts":59,"pm":-5,"sh":214,"ppg":0.86,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476887.png"},{"id":"8480036","name":"Miro Heiskanen","abbr":"NHL","pos":"D","gp":67,"g":9,"a":49,"pts":58,"pm":16,"sh":134,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480036.png"},{"id":"8477949","name":"Alex Tuch","abbr":"NHL","pos":"R","gp":67,"g":28,"a":30,"pts":58,"pm":19,"sh":164,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477949.png"},{"id":"8480893","name":"Kirill Marchenko","abbr":"NHL","pos":"R","gp":63,"g":25,"a":33,"pts":58,"pm":5,"sh":185,"ppg":0.92,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480893.png"},{"id":"8475166","name":"John Tavares","abbr":"NHL","pos":"C","gp":71,"g":25,"a":32,"pts":57,"pm":-26,"sh":173,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475166.png"},{"id":"8482720","name":"Matthew Knies","abbr":"NHL","pos":"L","gp":68,"g":18,"a":39,"pts":57,"pm":-19,"sh":126,"ppg":0.84,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482720.png"},{"id":"8481604","name":"Pavel Dorofeyev","abbr":"NHL","pos":"R","gp":70,"g":34,"a":23,"pts":57,"pm":-3,"sh":196,"ppg":0.81,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481604.png"},{"id":"8482093","name":"Seth Jarvis","abbr":"NHL","pos":"C","gp":61,"g":28,"a":28,"pts":56,"pm":6,"sh":192,"ppg":0.92,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482093.png"},{"id":"8480014","name":"Gabriel Vilardi","abbr":"NHL","pos":"C","gp":69,"g":26,"a":30,"pts":56,"pm":-8,"sh":132,"ppg":0.81,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480014.png"},{"id":"8484153","name":"Leo Carlsson","abbr":"NHL","pos":"C","gp":57,"g":24,"a":32,"pts":56,"pm":2,"sh":147,"ppg":0.98,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484153.png"},{"id":"8475754","name":"Brock Nelson","abbr":"NHL","pos":"C","gp":68,"g":31,"a":25,"pts":56,"pm":10,"sh":164,"ppg":0.82,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475754.png"},{"id":"8477940","name":"Nikolaj Ehlers","abbr":"NHL","pos":"L","gp":69,"g":20,"a":36,"pts":56,"pm":6,"sh":169,"ppg":0.81,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477940.png"},{"id":"8475810","name":"Bryan Rust","abbr":"NHL","pos":"R","gp":62,"g":26,"a":30,"pts":56,"pm":5,"sh":162,"ppg":0.9,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475810.png"},{"id":"8475745","name":"Charlie Coyle","abbr":"NHL","pos":"C","gp":69,"g":17,"a":38,"pts":55,"pm":11,"sh":125,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8475745.png"},{"id":"8479407","name":"Jesper Bratt","abbr":"NHL","pos":"L","gp":69,"g":17,"a":38,"pts":55,"pm":-16,"sh":153,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479407.png"},{"id":"8481533","name":"Trevor Zegras","abbr":"NHL","pos":"C","gp":69,"g":22,"a":33,"pts":55,"pm":-2,"sh":146,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481533.png"},{"id":"8477946","name":"Dylan Larkin","abbr":"NHL","pos":"C","gp":63,"g":28,"a":27,"pts":55,"pm":7,"sh":191,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477946.png"},{"id":"8474564","name":"Steven Stamkos","abbr":"NHL","pos":"C","gp":69,"g":33,"a":22,"pts":55,"pm":-21,"sh":164,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8474564.png"},{"id":"8481559","name":"Jack Hughes","abbr":"NHL","pos":"C","gp":48,"g":18,"a":37,"pts":55,"pm":-3,"sh":170,"ppg":1.15,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481559.png"},{"id":"8474578","name":"Erik Karlsson","abbr":"NHL","pos":"D","gp":64,"g":11,"a":43,"pts":54,"pm":14,"sh":149,"ppg":0.84,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8474578.png"},{"id":"8476881","name":"Tomas Hertl","abbr":"NHL","pos":"C","gp":70,"g":24,"a":30,"pts":54,"pm":-14,"sh":175,"ppg":0.77,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476881.png"},{"id":"8473419","name":"Brad Marchand","abbr":"NHL","pos":"L","gp":52,"g":27,"a":27,"pts":54,"pm":-16,"sh":138,"ppg":1.04,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8473419.png"},{"id":"8479325","name":"Charlie McAvoy","abbr":"NHL","pos":"D","gp":58,"g":9,"a":44,"pts":53,"pm":8,"sh":95,"ppg":0.91,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479325.png"},{"id":"8477511","name":"Anthony Mantha","abbr":"NHL","pos":"R","gp":69,"g":26,"a":27,"pts":53,"pm":14,"sh":130,"ppg":0.77,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477511.png"},{"id":"8477935","name":"Sam Bennett","abbr":"NHL","pos":"C","gp":68,"g":25,"a":28,"pts":53,"pm":-9,"sh":177,"ppg":0.78,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477935.png"},{"id":"8479318","name":"Auston Matthews","abbr":"NHL","pos":"C","gp":60,"g":27,"a":26,"pts":53,"pm":-4,"sh":227,"ppg":0.88,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479318.png"},{"id":"8484166","name":"Adam Fantilli","abbr":"NHL","pos":"C","gp":69,"g":21,"a":31,"pts":52,"pm":-10,"sh":185,"ppg":0.75,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484166.png"},{"id":"8484984","name":"Ivan Demidov","abbr":"NHL","pos":"R","gp":69,"g":14,"a":38,"pts":52,"pm":3,"sh":104,"ppg":0.75,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484984.png"},{"id":"8476880","name":"Tom Wilson","abbr":"NHL","pos":"R","gp":60,"g":25,"a":27,"pts":52,"pm":15,"sh":130,"ppg":0.87,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476880.png"},{"id":"8480002","name":"Nico Hischier","abbr":"NHL","pos":"C","gp":69,"g":24,"a":28,"pts":52,"pm":-11,"sh":179,"ppg":0.75,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480002.png"},{"id":"8471215","name":"Evgeni Malkin","abbr":"NHL","pos":"C","gp":49,"g":15,"a":37,"pts":52,"pm":14,"sh":129,"ppg":1.06,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8471215.png"},{"id":"8484762","name":"Beckett Sennecke","abbr":"NHL","pos":"R","gp":69,"g":20,"a":32,"pts":52,"pm":-14,"sh":166,"ppg":0.75,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8484762.png"},{"id":"8471214","name":"Alex Ovechkin","abbr":"NHL","pos":"L","gp":70,"g":25,"a":27,"pts":52,"pm":-3,"sh":201,"ppg":0.74,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8471214.png"},{"id":"8476454","name":"Ryan Nugent-Hopkins","abbr":"NHL","pos":"C","gp":61,"g":18,"a":33,"pts":51,"pm":-13,"sh":108,"ppg":0.84,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8476454.png"},{"id":"8479345","name":"Jakob Chychrun","abbr":"NHL","pos":"D","gp":68,"g":23,"a":28,"pts":51,"pm":15,"sh":203,"ppg":0.75,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8479345.png"},{"id":"8478401","name":"Pavel Zacha","abbr":"NHL","pos":"C","gp":67,"g":23,"a":28,"pts":51,"pm":-1,"sh":112,"ppg":0.76,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478401.png"},{"id":"8481528","name":"Dylan Cozens","abbr":"NHL","pos":"C","gp":69,"g":24,"a":27,"pts":51,"pm":-9,"sh":166,"ppg":0.74,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481528.png"},{"id":"8485366","name":"Matthew Schaefer","abbr":"NHL","pos":"D","gp":70,"g":22,"a":29,"pts":51,"pm":14,"sh":176,"ppg":0.73,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8485366.png"},{"id":"8478440","name":"Dylan Strome","abbr":"NHL","pos":"C","gp":68,"g":16,"a":34,"pts":50,"pm":3,"sh":129,"ppg":0.74,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478440.png"},{"id":"8477500","name":"Bo Horvat","abbr":"NHL","pos":"C","gp":56,"g":28,"a":21,"pts":49,"pm":10,"sh":186,"ppg":0.88,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477500.png"},{"id":"8474586","name":"Jordan Eberle","abbr":"NHL","pos":"R","gp":67,"g":22,"a":27,"pts":49,"pm":6,"sh":148,"ppg":0.73,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8474586.png"},{"id":"8480802","name":"Ryan McLeod","abbr":"NHL","pos":"C","gp":70,"g":12,"a":37,"pts":49,"pm":28,"sh":83,"ppg":0.7,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8480802.png"},{"id":"8478873","name":"Troy Terry","abbr":"NHL","pos":"R","gp":49,"g":14,"a":35,"pts":49,"pm":11,"sh":117,"ppg":1.0,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478873.png"},{"id":"8477409","name":"Carter Verhaeghe","abbr":"NHL","pos":"C","gp":67,"g":20,"a":29,"pts":49,"pm":-11,"sh":161,"ppg":0.73,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477409.png"},{"id":"8477479","name":"Tyler Bertuzzi","abbr":"NHL","pos":"L","gp":66,"g":28,"a":21,"pts":49,"pm":-21,"sh":141,"ppg":0.74,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477479.png"},{"id":"8482146","name":"Luke Evangelista","abbr":"NHL","pos":"R","gp":68,"g":9,"a":39,"pts":48,"pm":5,"sh":144,"ppg":0.71,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8482146.png"},{"id":"8478519","name":"Anthony Cirelli","abbr":"NHL","pos":"C","gp":60,"g":19,"a":29,"pts":48,"pm":32,"sh":106,"ppg":0.8,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8478519.png"},{"id":"8481542","name":"Moritz Seider","abbr":"NHL","pos":"D","gp":70,"g":9,"a":39,"pts":48,"pm":20,"sh":157,"ppg":0.69,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8481542.png"},{"id":"8477964","name":"Ivan Barbashev","abbr":"NHL","pos":"L","gp":70,"g":19,"a":29,"pts":48,"pm":9,"sh":112,"ppg":0.69,"color":"#38bdf8","photo":"https:\/\/assets.nhle.com\/mugs\/nhl\/latest\/8477964.png"}];
+            const avgPts = 63.2;
+            let teamFilter = 'ALL';
+            let radar = null;
+
+            function render() {
+                const query = document.getElementById('search').value.toLowerCase();
+                const grid = document.getElementById('grid');
+                grid.innerHTML = '';
+
+                data.filter(p => (teamFilter === 'ALL' || p.abbr === teamFilter))
+                    .filter(p => p.name.toLowerCase().includes(query))
+                    .forEach(p => {
+                        const perfRatio = Math.min((p.pts / (avgPts * 1.5)) * 100, 100);
+                        grid.innerHTML += `
+                            <div class="card" style="--team-color: ${p.color}" onclick="openModal('${p.id}')">
+                                <div class="card-header">
+                                    <img src="${p.photo}" class="player-thumb" onerror="this.src='https://assets.nhle.com/logos/nhl/svg/${p.abbr}_light.svg'">
+                                    <div class="name-area">
+                                        <h3>${p.name}</h3>
+                                        <span>${p.abbr} • ${p.pos}</span>
+                                    </div>
+                                    <div style="margin-left:auto; text-align:right;">
+                                        <div style="font-size:1.5rem; font-weight:900; color:var(--accent)">${p.pts}</div>
+                                        <div style="font-size:0.6rem; color:#9ca3af">POINTS</div>
+                                    </div>
+                                </div>
+                                <div style="font-size:0.7rem; color:#9ca3af; display:flex; justify-content:space-between;">
+                                    <span>Vs. League Avg Efficiency</span>
+                                    <span>${Math.round((p.pts/avgPts)*100)}%</span>
+                                </div>
+                                <div class="comp-bar"><div class="comp-fill" style="width: ${perfRatio}%"></div></div>
+                            </div>`;
+                    });
+            }
+
+            function filterTeam(t) {
+                teamFilter = (teamFilter === t) ? 'ALL' : t;
+                render();
+            }
+
+            function openModal(id) {
+                const p = data.find(x => x.id === id);
+                document.getElementById('mInfo').innerHTML = `
+                    <img src="${p.photo}" style="width:150px; border-radius:50%; background:#000; border:4px solid ${p.color}">
+                    <h2 style="font-family:'Syncopate'; margin:20px 0 5px;">${p.name}</h2>
+                    <div style="color:${p.color}; font-weight:700; margin-bottom:30px;">${p.abbr} PREMIER TALENT</div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; text-align:left;">
+                        <div class="stat-card" style="padding:10px">GP: ${p.gp}</div>
+                        <div class="stat-card" style="padding:10px">PPG: ${p.ppg}</div>
+                        <div class="stat-card" style="padding:10px">Goals: ${p.g}</div>
+                        <div class="stat-card" style="padding:10px">+/-: ${p.pm}</div>
+                    </div>
+                `;
+                document.getElementById('modal').style.display = 'block';
+                drawRadar(p);
+            }
+
+            function drawRadar(p) {
+                const ctx = document.getElementById('radar').getContext('2d');
+                if(radar) radar.destroy();
+                radar = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Scoring', 'Playmaking', 'Efficiency', 'Shot Vol.', 'Impact'],
+                        datasets: [{
+                            data: [p.g * 1.5, p.a * 1.2, p.ppg * 40, p.sh / 5, (p.pts + p.pm) * 0.8],
+                            backgroundColor: 'rgba(56,189,248,0.2)',
+                            borderColor: '#38bdf8',
+                            borderWidth: 2,
+                            pointRadius: 4
+                        }]
+                    },
+                    options: { 
+                        scales: { r: { angleLines: {color:'#374151'}, grid: {color:'#374151'}, pointLabels:{color:'#9ca3af'}, ticks:{display:false} } },
+                        plugins: { legend: {display:false} }
+                    }
+                });
+            }
+
+            function closeModal() { document.getElementById('modal').style.display = 'none'; }
+            render();
+        </script>
+    </body>
+    </html>
