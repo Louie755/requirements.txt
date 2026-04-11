@@ -233,4 +233,7 @@ def index():
     """)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=10000, debug=True)
+    # Render는 PORT라는 환경 변수를 사용합니다. 없으면 10000번을 기본으로 씁니다.
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
